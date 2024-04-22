@@ -1,0 +1,16 @@
+import empanadas.*
+
+describe "Test de empanadas gimenez" {
+	test "finanzas galvan" {
+		galvan.gastar(40000)
+		galvan.gastar(80000)
+		galvan.cobrarSueldo()
+		galvan.gastar(250000)
+		galvan.cobrarSueldo()
+		galvan.totalDeuda()
+		galvan.totalDinero()
+		
+		assert.equals(70000, galvan.totalDeuda())
+		assert.equals(0, galvan.totalDinero())
+	}
+}
